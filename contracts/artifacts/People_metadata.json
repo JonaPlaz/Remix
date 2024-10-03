@@ -6,6 +6,24 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
+				"name": "modifyPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "moi",
 				"outputs": [
@@ -52,11 +70,11 @@
 	},
 	"sources": {
 		"contracts/4_People.sol": {
-			"keccak256": "0xaf0ba2c2e9dd7fcae8f9a7fe72ad9187e3a1d050150b1092f726eabe1bdad83f",
+			"keccak256": "0xe510016fc136394306a887664f323c8c807971bde422334ed023aa071c6c5f5b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://60fa61c0ae9ce488a50680cc46b0d880d19f97137731961a7c7d9c05bd6f48a0",
-				"dweb:/ipfs/QmZB9fNjJmxo6EH4gobEhaRWCSqqbAqogUXFeBL4At9c31"
+				"bzz-raw://8462f52d82f4e63993b7b6a8a30d17eb75575b5c47dab16186bd209e9a48dea3",
+				"dweb:/ipfs/QmamjV8xocRBZre5zzrUAZzpmSe3HoNEJvgL19T3NWMPA7"
 			]
 		}
 	},
