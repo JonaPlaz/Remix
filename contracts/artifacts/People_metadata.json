@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "moi",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "age",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/4_People.sol": "People"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/4_People.sol": {
+			"keccak256": "0xaf0ba2c2e9dd7fcae8f9a7fe72ad9187e3a1d050150b1092f726eabe1bdad83f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://60fa61c0ae9ce488a50680cc46b0d880d19f97137731961a7c7d9c05bd6f48a0",
+				"dweb:/ipfs/QmZB9fNjJmxo6EH4gobEhaRWCSqqbAqogUXFeBL4At9c31"
+			]
+		}
+	},
+	"version": 1
+}
