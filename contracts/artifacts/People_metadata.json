@@ -18,6 +18,24 @@
 						"type": "uint8"
 					}
 				],
+				"name": "add",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
 				"name": "modifyPerson",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -64,6 +82,38 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "remove",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct People.Person[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -94,11 +144,11 @@
 	},
 	"sources": {
 		"contracts/4_People.sol": {
-			"keccak256": "0xcec8e31d1ccf71376f46282c5f34ffbca0b6a91693d779258c5be9825cb4c5b4",
+			"keccak256": "0x1d0930f5886acbd88c98f43def18d66270da01835849cfa70455491eca4910aa",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7cb6336333739c690a0eb3a9a72a3b7f4d56086f1c32fc8328e0fe2722026a83",
-				"dweb:/ipfs/QmaZhyqZkTXsBWTf6T7ndgoq6dpQXcAZSbgZ4VEV73BqHn"
+				"bzz-raw://262d8a04056100d9874f12827a0d5c89676a6b44ef0c8a9bed9818fe4b8345d8",
+				"dweb:/ipfs/QmXj9vCJ8fN4PA9hvrRfZHKswyXh1TjDzu4X9DLzuTX19A"
 			]
 		}
 	},

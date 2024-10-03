@@ -14,4 +14,16 @@ contract People {
     function modifyPerson (string memory _name, uint8 _age) public {
         moi = Person(_name, _age);
     }
+
+    function add (string memory _name, uint8 _age) public {
+        persons.push(Person(_name, _age));
+    }
+
+    function remove() public {
+        persons.pop();
+    }
+
+    function retrieve() public view  returns (Person[] memory) {
+        return  persons;
+    }
 }
