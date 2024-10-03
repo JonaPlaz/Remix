@@ -9,6 +9,8 @@ contract People {
 
     Person public moi;
 
+    Person[] public persons;
+
     function modifyPerson (string memory _name, uint8 _age) public {
         moi = Person(_name, _age);
     }

@@ -40,6 +40,30 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "persons",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "age",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -70,11 +94,11 @@
 	},
 	"sources": {
 		"contracts/4_People.sol": {
-			"keccak256": "0xe510016fc136394306a887664f323c8c807971bde422334ed023aa071c6c5f5b",
+			"keccak256": "0xcec8e31d1ccf71376f46282c5f34ffbca0b6a91693d779258c5be9825cb4c5b4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8462f52d82f4e63993b7b6a8a30d17eb75575b5c47dab16186bd209e9a48dea3",
-				"dweb:/ipfs/QmamjV8xocRBZre5zzrUAZzpmSe3HoNEJvgL19T3NWMPA7"
+				"bzz-raw://7cb6336333739c690a0eb3a9a72a3b7f4d56086f1c32fc8328e0fe2722026a83",
+				"dweb:/ipfs/QmaZhyqZkTXsBWTf6T7ndgoq6dpQXcAZSbgZ4VEV73BqHn"
 			]
 		}
 	},
