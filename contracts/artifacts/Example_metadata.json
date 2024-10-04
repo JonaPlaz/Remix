@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/5_Whitelist.sol": "Whitelist"
+			"contracts/0_example.sol": "Example"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/5_Whitelist.sol": {
-			"keccak256": "0xe30875e407ed06d944eb88e1f0431893bb42f12a5ab64c535b639b4a77b7bcd6",
+		"contracts/0_example.sol": {
+			"keccak256": "0x45f94d011c29b1998cde1892650632f0886a973e2d38a8b3cd3ff27340873ad5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2cd489ccff9531cfb19a428200f369b2a595d3a0b03596d7ff4e452cf030d461",
-				"dweb:/ipfs/QmPU557X52Fd65Z58Ha4SVMcr4aMEDcb5CDqLCRnhqVQVT"
+				"bzz-raw://99a402042ec362ece0084d78aae9912d75b181e2ed2f8e077e101376b8b4f33b",
+				"dweb:/ipfs/QmPYr9y3ZRcYyJNNwtd3VUW4BVeonAphQ6udHYXV2DzkdJ"
 			]
 		}
 	},
