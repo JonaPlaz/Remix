@@ -4,7 +4,21 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "Authorized",
+				"type": "event"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +47,11 @@
 	},
 	"sources": {
 		"contracts/5_Whitelist.sol": {
-			"keccak256": "0xe30875e407ed06d944eb88e1f0431893bb42f12a5ab64c535b639b4a77b7bcd6",
+			"keccak256": "0x0788bafba7f2d3a2b578c4ead72cf8382ef07f465c191ca36e2c281ad6ef0aeb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2cd489ccff9531cfb19a428200f369b2a595d3a0b03596d7ff4e452cf030d461",
-				"dweb:/ipfs/QmPU557X52Fd65Z58Ha4SVMcr4aMEDcb5CDqLCRnhqVQVT"
+				"bzz-raw://07399acdfbd83ff08acadd2492833c6e922ec6e58b842f20885a4f367d95b97d",
+				"dweb:/ipfs/QmQo9xkaha7dLn7ajEkhLRjQt2mYvcyjsDvPLU8uvt4zNC"
 			]
 		}
 	},
