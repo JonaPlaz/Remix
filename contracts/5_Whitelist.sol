@@ -9,6 +9,7 @@ contract Whitelist {
     // event EthReceived(address _addr, uint value);
 
     function authorize(address _address) public {
+        require(check(), "You are not authorized !");
         whitelist[_address] = true;
         emit Authorized(_address);
     }
@@ -20,4 +21,8 @@ contract Whitelist {
     // fallback() external payable {
     //     emit EthReceived(msg.sender, msg.value);
     //  }
+
+    function check() private view returns (bool) {
+       return whitelist[msg.sender];
+    }
 }

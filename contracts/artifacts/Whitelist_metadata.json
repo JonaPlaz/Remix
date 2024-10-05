@@ -60,11 +60,11 @@
 	},
 	"sources": {
 		"contracts/5_Whitelist.sol": {
-			"keccak256": "0x613048e091f89a5395ac7b410c7f033b84102ce7557efa5c497ca58dee96c69b",
+			"keccak256": "0x162ccfa49a933d5193c7db2a9a5b6402b3a828ee088bf8d1698ceff2a7def0f0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4bad47e0565d202561e475a9cd2f71948b814f82707da06c8d254bfc864fc026",
-				"dweb:/ipfs/QmejExCbTCNKQTv7xhk4iYKC5Dx9ruEXCvLKH16vzASrUj"
+				"bzz-raw://5187bac69c7fcbe1eaec0d07681078ec0c59fbbde39f330c4f3180e2b0397439",
+				"dweb:/ipfs/QmdLxrFmTmMZ1mdWjwjs6asthsqF2vZ4cKoh6uJm5THL7Y"
 			]
 		}
 	},
