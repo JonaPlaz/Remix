@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -60,11 +65,11 @@
 	},
 	"sources": {
 		"contracts/5_Whitelist.sol": {
-			"keccak256": "0x162ccfa49a933d5193c7db2a9a5b6402b3a828ee088bf8d1698ceff2a7def0f0",
+			"keccak256": "0x17305cc608ecc6f5be45131188d0b78c93c80874f2900104d5bc96b9b92eb32a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5187bac69c7fcbe1eaec0d07681078ec0c59fbbde39f330c4f3180e2b0397439",
-				"dweb:/ipfs/QmdLxrFmTmMZ1mdWjwjs6asthsqF2vZ4cKoh6uJm5THL7Y"
+				"bzz-raw://25f7599a3a4a0bc0aed68a3a30951a1403166e8153509057d6f51fefe6aa417c",
+				"dweb:/ipfs/QmSdigCCFVhLPBnyxNST4mCrKAHHCvgQUE6Hq17bmrFHVs"
 			]
 		}
 	},
