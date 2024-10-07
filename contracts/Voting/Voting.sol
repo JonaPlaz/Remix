@@ -28,6 +28,8 @@ contract Voting is Ownable {
 
     uint256 private winningProposalId;
 
+    mapping(address => bool) whitelist;
+
     event VoterRegistered(address voterAddress);
     event WorkflowStatusChange(
         WorkflowStatus previousStatus,
@@ -36,7 +38,36 @@ contract Voting is Ownable {
     event ProposalRegistered(uint256 proposalId);
     event Voted(address voter, uint256 proposalId);
 
-    function getWinner() public view returns (uint256) {
-        return winningProposalId;
+    function authorize() public onlyOwner {
+
+    }
+
+    function startProposalsSession() public onlyOwner {
+
+    }
+
+    function registerProposal() public {
+
+    }
+
+    function endProposalsSession() public onlyOwner {
+
+    }
+    
+    function startVotingSession() public onlyOwner {
+
+    }
+
+    function endVotingSession() public onlyOwner {
+
+    }
+
+    function countVotes() public  onlyOwner {
+
+    }
+
+    function getWinner() public pure returns (Proposal memory) {
+        // peut être à remettre en view après implémentation
+        return Proposal({description : 'proposition de test', voteCount: 20});
     }
 }

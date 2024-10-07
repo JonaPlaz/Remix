@@ -117,15 +117,55 @@
 			},
 			{
 				"inputs": [],
+				"name": "authorize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "countVotes",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endProposalsSession",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endVotingSession",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getWinner",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"components": [
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "voteCount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Voting.Proposal",
 						"name": "",
-						"type": "uint256"
+						"type": "tuple"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -143,7 +183,28 @@
 			},
 			{
 				"inputs": [],
+				"name": "registerProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startProposalsSession",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startVotingSession",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -228,11 +289,11 @@
 			]
 		},
 		"contracts/Voting/Voting.sol": {
-			"keccak256": "0x188347b54b20aeac16addb40121a6d5b7b418fe4f82d05e96a50f64b867e8da8",
+			"keccak256": "0xaf8cbb6d91407071a3b33c22f0de21047165fa6102fd0bbeec647865fefad2f1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b0247541583b986f3b321f2c7af0cc39699c1666700a02e0f557c81b0e64b3ba",
-				"dweb:/ipfs/QmTvFiakqtuqjmVzjq3jZV13X62QPkF6Mvd9CwBygMCfux"
+				"bzz-raw://d87d594ae0b5b4dbcbf6ae1a8cd255a5591357bd3d200e47387bab74001ce3a4",
+				"dweb:/ipfs/QmRX7beiiozMQdKBYyj9x8NZJDb7PtEEASaGrh4UwjXGsM"
 			]
 		}
 	},
