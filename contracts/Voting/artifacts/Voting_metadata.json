@@ -116,7 +116,13 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
 				"name": "authorize",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -131,7 +137,20 @@
 			},
 			{
 				"inputs": [],
-				"name": "endProposalsSession",
+				"name": "currentStatus",
+				"outputs": [
+					{
+						"internalType": "enum Voting.WorkflowStatus",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endProposalsRegistration",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -182,7 +201,42 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "proposalList",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "voteCount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					}
+				],
 				"name": "registerProposal",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -197,7 +251,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "startProposalsSession",
+				"name": "startProposalsRegistration",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -220,6 +274,43 @@
 				"name": "transferOwnership",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_proposalId",
+						"type": "uint256"
+					}
+				],
+				"name": "voteForProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "voterProposalIds",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -289,11 +380,11 @@
 			]
 		},
 		"contracts/Voting/Voting.sol": {
-			"keccak256": "0xaf8cbb6d91407071a3b33c22f0de21047165fa6102fd0bbeec647865fefad2f1",
+			"keccak256": "0x4cfe22cd95320ef95126291d178d1add2403d084791edb3f09af171186b7c719",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d87d594ae0b5b4dbcbf6ae1a8cd255a5591357bd3d200e47387bab74001ce3a4",
-				"dweb:/ipfs/QmRX7beiiozMQdKBYyj9x8NZJDb7PtEEASaGrh4UwjXGsM"
+				"bzz-raw://340408faabd6be66b1911f3d68113864737fa4c9bfdce5c0e3527c4522205bdb",
+				"dweb:/ipfs/Qme6bdcpQNXnxiHvWdc4FaMi4eLRDqTGaHif3RnjxFbjcz"
 			]
 		}
 	},

@@ -27,8 +27,11 @@ contract Voting is Ownable {
     }
 
     uint256 private winningProposalId;
+    WorkflowStatus public currentStatus;
 
-    mapping(address => bool) whitelist;
+    mapping(address => Voter) whitelist;
+    mapping(address => uint256) public voterProposalIds;
+    Proposal[] public proposalList;
 
     event VoterRegistered(address voterAddress);
     event WorkflowStatusChange(
@@ -38,36 +41,102 @@ contract Voting is Ownable {
     event ProposalRegistered(uint256 proposalId);
     event Voted(address voter, uint256 proposalId);
 
-    function authorize() public onlyOwner {
-
+    function authorize(address _address) public onlyOwner {
+        require(
+            currentStatus == WorkflowStatus.RegisteringVoters,
+            "Voter registration is not allowed at this stage"
+        );
+        require(!whitelist[_address].isRegistered, "already in the whitelist");
+        whitelist[_address].isRegistered;
+        emit VoterRegistered(_address);
     }
 
-    function startProposalsSession() public onlyOwner {
-
+    function startProposalsRegistration() public onlyOwner {
+        require(
+            currentStatus == WorkflowStatus.RegisteringVoters,
+            "Cannot start proposal registration at this stage"
+        );
+        WorkflowStatus newStatus = WorkflowStatus.ProposalsRegistrationStarted;
+        emit WorkflowStatusChange(currentStatus, newStatus);
+        currentStatus = newStatus;
     }
 
-    function registerProposal() public {
+    function registerProposal(address _address, string memory _description)
+        public
+    {
+        require(
+            currentStatus == WorkflowStatus.ProposalsRegistrationStarted,
+            "Cannot register proposal"
+        );
+        require(whitelist[_address].isRegistered, "Voter is not registered");
+        Proposal memory newProposal = Proposal({
+            description: _description,
+            voteCount: 0
+        });
+        proposalList.push(newProposal);
 
+        uint256 proposalId = proposalList.length;
+
+        voterProposalIds[_address] = proposalId;
+
+        emit ProposalRegistered(proposalId);
     }
 
-    function endProposalsSession() public onlyOwner {
-
+    function endProposalsRegistration() public onlyOwner {
+        require(
+            currentStatus == WorkflowStatus.ProposalsRegistrationStarted,
+            "Cannot end proposal registration at this stage"
+        );
+        WorkflowStatus newStatus = WorkflowStatus.ProposalsRegistrationEnded;
+        emit WorkflowStatusChange(currentStatus, newStatus);
+        currentStatus = newStatus;
     }
-    
+
     function startVotingSession() public onlyOwner {
-
+        require(
+            currentStatus == WorkflowStatus.ProposalsRegistrationEnded,
+            "Cannot start voting session at this stage"
+        );
+        WorkflowStatus newStatus = WorkflowStatus.VotingSessionStarted;
+        emit WorkflowStatusChange(currentStatus, newStatus);
+        currentStatus = newStatus;
     }
 
     function endVotingSession() public onlyOwner {
-
+        require(
+            currentStatus == WorkflowStatus.VotingSessionStarted,
+            "Cannot end voting session at this stage"
+        );
+        WorkflowStatus newStatus = WorkflowStatus.VotingSessionEnded;
+        emit WorkflowStatusChange(currentStatus, newStatus);
+        currentStatus = newStatus;
     }
 
-    function countVotes() public  onlyOwner {
+    function voteForProposal(address _address, uint256 _proposalId) public {
+        require(
+            currentStatus == WorkflowStatus.VotingSessionStarted,
+            "Cannot start counting votes"
+        );
+        require(whitelist[_address].isRegistered, "Voter is not registered");
+        require(!whitelist[_address].hasVoted, "Voter has already voted");
+        require(_proposalId < proposalList.length, "Invalid proposal id");
 
+        emit Voted(_address, _proposalId);
+    }
+
+    function countVotes() public onlyOwner {
+        require(
+            currentStatus == WorkflowStatus.VotingSessionEnded,
+            "Cannot start counting votes"
+        );
+        WorkflowStatus newStatus = WorkflowStatus.VotesTallied;
+        emit WorkflowStatusChange(currentStatus, newStatus);
+        currentStatus = newStatus;
+        winningProposalId = 10; // en attente du compte
     }
 
     function getWinner() public pure returns (Proposal memory) {
         // peut être à remettre en view après implémentation
-        return Proposal({description : 'proposition de test', voteCount: 20});
+        return Proposal({description: "proposition de test", voteCount: 20});
     }
 }
