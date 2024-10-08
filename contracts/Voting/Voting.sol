@@ -48,7 +48,7 @@ contract Voting is Ownable {
             "Voter registration is not allowed at this stage"
         );
         require(!whitelist[_address].isRegistered, "already in the whitelist");
-        whitelist[_address].isRegistered;
+        whitelist[_address].isRegistered = true;
         emit VoterRegistered(_address);
     }
 
