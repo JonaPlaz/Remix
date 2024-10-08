@@ -42,27 +42,32 @@ contract Voting is Ownable {
     event ProposalRegistered(uint256 proposalId);
     event Voted(address voter, uint256 proposalId);
 
-    function authorize(address _address) public onlyOwner {
-        require(
-            currentStatus == WorkflowStatus.RegisteringVoters,
-            "Voter registration is not allowed at this stage"
-        );
+    modifier checkCurrentStatus(WorkflowStatus _status) {
+        require(currentStatus == _status, "Invalid workflow status");
+        _;
+    }
+
+    function authorize(address _address)
+        public
+        onlyOwner
+        checkCurrentStatus(WorkflowStatus.RegisteringVoters)
+    {
         require(!whitelist[_address].isRegistered, "already in the whitelist");
         whitelist[_address].isRegistered = true;
         emit VoterRegistered(_address);
     }
 
-    function workFlowStatusChange(WorkflowStatus _newStatus) private {
+    function updateStatus(WorkflowStatus _newStatus) private {
         emit WorkflowStatusChange(currentStatus, _newStatus);
         currentStatus = _newStatus;
     }
 
-    function startProposalsRegistration() public onlyOwner {
-        require(
-            currentStatus == WorkflowStatus.RegisteringVoters,
-            "Cannot start proposal registration at this stage"
-        );
-        workFlowStatusChange(WorkflowStatus.ProposalsRegistrationStarted);
+    function startProposalsRegistration()
+        public
+        onlyOwner
+        checkCurrentStatus(WorkflowStatus.RegisteringVoters)
+    {
+        updateStatus(WorkflowStatus.ProposalsRegistrationStarted);
     }
 
     modifier isRegisteredVoter(address _address) {
@@ -73,41 +78,34 @@ contract Voting is Ownable {
     function registerProposal(address _address, string memory _description)
         public
         isRegisteredVoter(_address)
+        checkCurrentStatus(WorkflowStatus.ProposalsRegistrationStarted)
     {
-        require(
-            currentStatus == WorkflowStatus.ProposalsRegistrationStarted,
-            "Cannot register proposal"
-        );
-
         proposalList.push(Proposal({description: _description, voteCount: 0}));
 
         emit ProposalRegistered(proposalList.length);
     }
 
-    function endProposalsRegistration() public onlyOwner {
-        require(
-            currentStatus == WorkflowStatus.ProposalsRegistrationStarted,
-            "Cannot end proposal registration at this stage"
-        );
-        workFlowStatusChange(WorkflowStatus.ProposalsRegistrationEnded);
+    function endProposalsRegistration()
+        public
+        onlyOwner
+        checkCurrentStatus(WorkflowStatus.ProposalsRegistrationStarted)
+    {
+        updateStatus(WorkflowStatus.ProposalsRegistrationEnded);
     }
 
-    function startVotingSession() public onlyOwner {
-        require(
-            currentStatus == WorkflowStatus.ProposalsRegistrationEnded,
-            "Cannot start voting session at this stage"
-        );
-        workFlowStatusChange(WorkflowStatus.VotingSessionStarted);
+    function startVotingSession()
+        public
+        onlyOwner
+        checkCurrentStatus(WorkflowStatus.ProposalsRegistrationEnded)
+    {
+        updateStatus(WorkflowStatus.VotingSessionStarted);
     }
 
     function voteForProposal(address _address, uint256 _proposalId)
         public
         isRegisteredVoter(_address)
+        checkCurrentStatus(WorkflowStatus.VotingSessionStarted)
     {
-        require(
-            currentStatus == WorkflowStatus.VotingSessionStarted,
-            "Cannot start counting votes"
-        );
         require(!whitelist[_address].hasVoted, "Voter has already voted");
         require(_proposalId <= proposalList.length, "Invalid proposal id");
 
@@ -117,20 +115,15 @@ contract Voting is Ownable {
         emit Voted(_address, _proposalId);
     }
 
-    function endVotingSession() public onlyOwner {
-        require(
-            currentStatus == WorkflowStatus.VotingSessionStarted,
-            "Cannot end voting session at this stage"
-        );
-        workFlowStatusChange(WorkflowStatus.VotingSessionEnded);
+    function endVotingSession()
+        public
+        onlyOwner
+        checkCurrentStatus(WorkflowStatus.VotingSessionStarted)
+    {
+        updateStatus(WorkflowStatus.VotingSessionEnded);
     }
 
-    function countVotes() public onlyOwner {
-        require(
-            currentStatus == WorkflowStatus.VotingSessionEnded,
-            "Cannot start counting votes"
-        );
-
+    function findWinningProposalId() private {
         uint256 maxVotes = 0;
         for (uint256 i = 0; i < proposalList.length; i++) {
             if (proposalList[i].voteCount > maxVotes) {
@@ -138,8 +131,15 @@ contract Voting is Ownable {
                 winningProposalId = i + 1;
             }
         }
+    }
 
-        workFlowStatusChange(WorkflowStatus.VotesTallied);
+    function countVotes()
+        public
+        onlyOwner
+        checkCurrentStatus(WorkflowStatus.VotingSessionEnded)
+    {
+        findWinningProposalId();
+        updateStatus(WorkflowStatus.VotesTallied);
     }
 
     function getWinner() public view returns (Proposal memory) {
