@@ -1,0 +1,74 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "withdrax",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/11_ContractExoLive.sol": "ContractExoLive2"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/11_ContractExoLive.sol": {
+			"keccak256": "0x1df9a0fa55bd242180bd355993653622e4d4d84e8bb972cdbd8d85d7fe0e2e06",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8cc2aa06eb52c5d30b5bf3781f51bfd6a0474efd7caac07dab222cd503f6f9ca",
+				"dweb:/ipfs/QmbKTvikhe5DciUxXzD9URduTnj6AovkSrucVySutiNb7m"
+			]
+		}
+	},
+	"version": 1
+}
