@@ -28,11 +28,11 @@ contract Voting is Ownable {
 
     uint256 private winningProposalId;
 
-    WorkflowStatus public currentStatus;
+    WorkflowStatus private currentStatus;
 
-    mapping(address => Voter) whitelist;
+    mapping(address => Voter) private whitelist;
 
-    Proposal[] public proposalList;
+    Proposal[] private proposalList;
 
     event VoterRegistered(address voterAddress);
     event WorkflowStatusChange(
@@ -47,10 +47,16 @@ contract Voting is Ownable {
         _;
     }
 
+    modifier checkNonZeroAddress(address _address) {
+        require(_address != address(0), "Address cannot be the zero address");
+        _;
+    }
+
     function authorize(address _address)
-        public
+        external
         onlyOwner
         checkCurrentStatus(WorkflowStatus.RegisteringVoters)
+        checkNonZeroAddress(_address)
     {
         require(!whitelist[_address].isRegistered, "already in the whitelist");
         whitelist[_address].isRegistered = true;
@@ -63,7 +69,7 @@ contract Voting is Ownable {
     }
 
     function startProposalsRegistration()
-        public
+        external
         onlyOwner
         checkCurrentStatus(WorkflowStatus.RegisteringVoters)
     {
@@ -76,7 +82,8 @@ contract Voting is Ownable {
     }
 
     function registerProposal(address _address, string memory _description)
-        public
+        external
+        checkNonZeroAddress(_address)
         isRegisteredVoter(_address)
         checkCurrentStatus(WorkflowStatus.ProposalsRegistrationStarted)
     {
@@ -86,7 +93,7 @@ contract Voting is Ownable {
     }
 
     function endProposalsRegistration()
-        public
+        external
         onlyOwner
         checkCurrentStatus(WorkflowStatus.ProposalsRegistrationStarted)
     {
@@ -94,7 +101,7 @@ contract Voting is Ownable {
     }
 
     function startVotingSession()
-        public
+        external
         onlyOwner
         checkCurrentStatus(WorkflowStatus.ProposalsRegistrationEnded)
     {
@@ -102,7 +109,8 @@ contract Voting is Ownable {
     }
 
     function voteForProposal(address _address, uint256 _proposalId)
-        public
+        external
+        checkNonZeroAddress(_address)
         isRegisteredVoter(_address)
         checkCurrentStatus(WorkflowStatus.VotingSessionStarted)
     {
@@ -116,7 +124,7 @@ contract Voting is Ownable {
     }
 
     function endVotingSession()
-        public
+        external
         onlyOwner
         checkCurrentStatus(WorkflowStatus.VotingSessionStarted)
     {
@@ -134,7 +142,7 @@ contract Voting is Ownable {
     }
 
     function countVotes()
-        public
+        external
         onlyOwner
         checkCurrentStatus(WorkflowStatus.VotingSessionEnded)
     {
@@ -142,7 +150,7 @@ contract Voting is Ownable {
         updateStatus(WorkflowStatus.VotesTallied);
     }
 
-    function getWinner() public view returns (Proposal memory) {
+    function getWinner() external view returns (Proposal memory) {
         return proposalList[winningProposalId - 1];
     }
 }
