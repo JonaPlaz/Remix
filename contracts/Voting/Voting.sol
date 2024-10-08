@@ -108,7 +108,7 @@ contract Voting is Ownable {
         );
         require(whitelist[_address].isRegistered, "Voter is not registered");
         require(!whitelist[_address].hasVoted, "Voter has already voted");
-        require(_proposalId < proposalList.length, "Invalid proposal id");
+        require(_proposalId <= proposalList.length, "Invalid proposal id");
 
         whitelist[_address].hasVoted = true;
         whitelist[_address].votedProposalId = _proposalId;
