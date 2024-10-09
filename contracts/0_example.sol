@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.26;
+pragma solidity 0.8.28;
 
 contract Example {
-    // ex array dans mapping  
-    mapping (address => uint[]) students;
+    // ex array dans mapping
+    mapping(address => uint256[]) students;
 }

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.27+commit.40a35a09"
+		"version": "0.8.28+commit.7893614a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -324,11 +324,11 @@
 			]
 		},
 		"contracts/Voting/Voting.sol": {
-			"keccak256": "0xea4a7abfb228181b6efeadee724a8e2b2a31fb41342e4e0555bce0fc0514012e",
+			"keccak256": "0x35756f513ad098ee51e4f7de3ef6a0508708a3ce70a43ff34173bc828de1d9a9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b08b20c68ea6610a11d9d68c8c92fcc4d7bf852293421a15d7819f75536bc786",
-				"dweb:/ipfs/QmQQ2iXM9PnZbCT9uPUAZ2L3vCqnjTjA66wVQk7UNeZjJH"
+				"bzz-raw://ceff334366140b086ea04bbd8104e5cb2f50a1cc7b6d0d40440742e8bfaee039",
+				"dweb:/ipfs/Qmaer5e51XtJVhJQ2DHPxB2kbH2YiMjh7xzKa1kJA7bKRm"
 			]
 		}
 	},

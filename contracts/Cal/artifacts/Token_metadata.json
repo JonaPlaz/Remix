@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.28+commit.7893614a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -483,11 +483,11 @@
 			]
 		},
 		"contracts/Cal/Token.sol": {
-			"keccak256": "0x0ced8af6661a237b9bb3da1a621d0233656c6c95f99299c01d7bc5faa2266850",
+			"keccak256": "0x0c72999eb0f918f8220849efa28e0af60116ff1bf9fbd5853523e92160701e6e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://2bc9e72efe8d1fe410cc518ddeab5d3de0b1270d310960d62070ab7105937aa0",
-				"dweb:/ipfs/QmZR4sAB5nrZoLjs8G7NtwBphudsA4aFV2D5HPwMa95cdD"
+				"bzz-raw://1155641c41017a1c6257cfaeed5ad356a16b7d617ea9d6658beca1b6fde073c9",
+				"dweb:/ipfs/QmUvomFjsLyEUkSRseUZj5XMiBjA55ZHWx9Edm3yBg5Z7q"
 			]
 		}
 	},

@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-
-pragma solidity >=0.7.0 <0.9.0;
+pragma solidity 0.8.28;
 
 import "hardhat/console.sol";
 
@@ -9,7 +8,6 @@ import "hardhat/console.sol";
  * @dev Set & change owner
  */
 contract Owner {
-
     address private owner;
 
     // event for EVM logging
@@ -40,16 +38,19 @@ contract Owner {
      * @param newOwner address of new owner
      */
     function changeOwner(address newOwner) public isOwner {
-        require(newOwner != address(0), "New owner should not be the zero address");
+        require(
+            newOwner != address(0),
+            "New owner should not be the zero address"
+        );
         emit OwnerSet(owner, newOwner);
         owner = newOwner;
     }
 
     /**
-     * @dev Return owner address 
+     * @dev Return owner address
      * @return address of owner
      */
     function getOwner() external view returns (address) {
         return owner;
     }
-} 
+}

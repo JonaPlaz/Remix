@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.27;
+pragma solidity 0.8.28;
 
 contract ContractExoLive6 {
     struct Apprenant {
@@ -73,7 +73,7 @@ contract ContractExoLive63 {
 
     mapping(address => Produit) public CommandesClients;
 
-    function command(uint _SKU) external {
+    function command(uint256 _SKU) external {
         Produit memory p = Produit(_SKU, etape.commande);
         CommandesClients[msg.sender] = p;
     }

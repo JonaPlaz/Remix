@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.27;
+pragma solidity 0.8.28;
 
 contract ContractExoLive2 {
     function deposit() external payable {
@@ -10,7 +10,7 @@ contract ContractExoLive2 {
         payable(_to).transfer(address(this).balance);
     }
 
-    receive() external payable { }
+    receive() external payable {}
 
-    fallback() external payable { }
+    fallback() external payable {}
 }

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.28+commit.7893614a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -32,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/8_Random.sol": "Random"
+			"contracts/08_Random.sol": "Random"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -46,12 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/8_Random.sol": {
-			"keccak256": "0x1425673e25d99186c4be49ef8d2d09bd4829731b3ea3fe622b2adb91340cd496",
+		"contracts/08_Random.sol": {
+			"keccak256": "0x695beeebe8f2e1a627de3071d77e757e0901df390e1ae09860a9364797b407c8",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b1f75537c7db3abff5ef6bc3318683a8c4f54e1d66a3cd203b9d66be7ab1c8d5",
-				"dweb:/ipfs/QmNkWw2UTtPmgDBXy8oELUM8VMdMVQWV4WHz4gREhzma8Q"
+				"bzz-raw://74aa3323b94edf1889ca34b7aaa9f3794e37d1500a72ef94bdfa3ba68f2f0d91",
+				"dweb:/ipfs/QmePvvwmDeaAmWCGwemECjoATmvthk7Y2Tkh3xu68BdEdn"
 			]
 		}
 	},

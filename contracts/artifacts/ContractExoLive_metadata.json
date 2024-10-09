@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.27+commit.40a35a09"
+		"version": "0.8.28+commit.7893614a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -152,11 +152,11 @@
 	},
 	"sources": {
 		"contracts/10_ContractExoLive.sol": {
-			"keccak256": "0x9ef30dbd824dc5835a92e65b8a2f6ca1a19825c64ad061c834ee939a082fde48",
+			"keccak256": "0x62fe8e27308ce52249182ec566254ad0d566423ba9b68261353e25b7ef248266",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e3541762d7d97edcd0bd5d37b19594122ae79763f37fc7728b7a0bb092b71d10",
-				"dweb:/ipfs/QmSf6rdhc9RZizeRLo1uR4wZivCYZZchLgPdjzoYL9GQS2"
+				"bzz-raw://376603364923f93763b347889655ea120305d52ecd885dedeeea7b1d17777959",
+				"dweb:/ipfs/QmdzEuq2MFcWSjmi1NeDXkb4GTWeCp3MvALT9YbQqvLUSh"
 			]
 		}
 	},

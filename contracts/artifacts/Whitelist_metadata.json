@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.28+commit.7893614a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -50,7 +50,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/5_Whitelist.sol": "Whitelist"
+			"contracts/05_Whitelist.sol": "Whitelist"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -64,12 +64,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/5_Whitelist.sol": {
-			"keccak256": "0x17305cc608ecc6f5be45131188d0b78c93c80874f2900104d5bc96b9b92eb32a",
+		"contracts/05_Whitelist.sol": {
+			"keccak256": "0xca7f5ad006787ad2351b38c9577a8b5644b0f2dbe0317b48119f224508131d59",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://25f7599a3a4a0bc0aed68a3a30951a1403166e8153509057d6f51fefe6aa417c",
-				"dweb:/ipfs/QmSdigCCFVhLPBnyxNST4mCrKAHHCvgQUE6Hq17bmrFHVs"
+				"bzz-raw://1b9b4b96e24f8e3e654825cf255e76347aab38cc7af9ab9731f96347c223776c",
+				"dweb:/ipfs/QmTsSr1fG5FYLZQxHso6XC74Sd59HD38CyC9UEdoYC64YE"
 			]
 		}
 	},

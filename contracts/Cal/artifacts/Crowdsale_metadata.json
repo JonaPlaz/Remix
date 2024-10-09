@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.28+commit.7893614a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -115,11 +115,11 @@
 			]
 		},
 		"contracts/Cal/Crowdsale.sol": {
-			"keccak256": "0x362b815ec7d60d360a2e4ef6c4ff80aba3a2df722d60793731f3bcaadf14068c",
+			"keccak256": "0xb73065614220f63ab0ff49d77b77012a1cf581bb5369d161a90e738b9a9377fc",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://109feba380aaa65711d3cadc2eae7fa8298e8daf3de6fdd04ef5ad085d79be81",
-				"dweb:/ipfs/QmanSp19XKueSJb1niuANRGi1dfoATDRhLo3sha7phyJxT"
+				"bzz-raw://d68dce296ee0aaef40d15611370f6f723d70d396afc049e94cadb33f5e67caf2",
+				"dweb:/ipfs/QmdJjZSWca1iwLGzonoTBSk4MLv7xKnhNCGaNHvq5xazBc"
 			]
 		},
 		"contracts/Cal/Token.sol": {
