@@ -1,0 +1,110 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_nombre",
+						"type": "uint256"
+					}
+				],
+				"name": "addNombres",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getNombresX2",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "nombres",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "monTableau",
+						"type": "uint256[]"
+					}
+				],
+				"name": "sommeTableau",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/15_ContractExoLive.sol": "ContractExoLive62"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/15_ContractExoLive.sol": {
+			"keccak256": "0x3231c1befe309e31ef17f3f066ca6aa35f26bec540900c11a4b140968df071d8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5ed8b86cb870c9730d7cdf5d61edd021ac52d9ec422dd52704267df7772e1f21",
+				"dweb:/ipfs/QmSWfd9eT2SH2UxAdRxVGF8vun87GDKcqMUXgQa7yjwoTz"
+			]
+		}
+	},
+	"version": 1
+}
