@@ -1,0 +1,123 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "noteBiology",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "noteMath",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "noteFr",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ClassRatingSystem.Student",
+						"name": "_student",
+						"type": "tuple"
+					}
+				],
+				"name": "addStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_teacherAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_teacherSubject",
+						"type": "string"
+					}
+				],
+				"name": "addTeacher",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_subject",
+						"type": "string"
+					}
+				],
+				"name": "getNote",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/18_ClassRatingSystem.sol": "ClassRatingSystem"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/18_ClassRatingSystem.sol": {
+			"keccak256": "0x4b53f7187a811e971e75ef2041a608e1bf8a8ccfa6179320f6f51d1573205982",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dc279eef17ae7168994d38254c7664ca96c9af366de41184d40069c32d3dd109",
+				"dweb:/ipfs/QmbW7GoV8j7NGqQ1husd3AzegBpoetNvPBfNAeLn6gE7v7"
+			]
+		}
+	},
+	"version": 1
+}

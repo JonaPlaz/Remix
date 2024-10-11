@@ -11,6 +11,11 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "GameIsFinished",
+				"type": "error"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -33,6 +38,30 @@
 				"type": "error"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "UserHasAlreadyPlayed",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_winner",
+						"type": "address"
+					}
+				],
+				"name": "GameWon",
+				"type": "event"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -53,6 +82,51 @@
 			},
 			{
 				"inputs": [],
+				"name": "getHint",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getWinner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_word",
+						"type": "string"
+					}
+				],
+				"name": "guess",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -67,6 +141,24 @@
 			{
 				"inputs": [],
 				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_word",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_hint",
+						"type": "string"
+					}
+				],
+				"name": "setWordAndHint",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -120,7 +212,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/17_GuessToWinBen.sol": "GuessToWin"
+			"contracts/17_GuessToWinBen.sol": "GuessToWinBen"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -151,11 +243,11 @@
 			]
 		},
 		"contracts/17_GuessToWinBen.sol": {
-			"keccak256": "0x634448e33822af374d387912d17e537ca0daf088cf49549a458e70cefb446d6a",
+			"keccak256": "0x8198f0947d479af4a47600fcfbb4d8ecd0256b8bb35c9217be42e329c173b56e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ed11def68c1463bba37d50fc082d1d4a27534153ee21728bb49d1d741a523709",
-				"dweb:/ipfs/QmWR2KgKbRfTBANp6wDogZ4iEKhoYJzdjRaMS3DWEccXqQ"
+				"bzz-raw://1d5da5c1b7834a8d1fcd3e7b6718d652f91887d77449ef6ba67909eef17055ec",
+				"dweb:/ipfs/QmQuyk5GrPgbn7WnMjrRgDpTk9dzUEXbwP7RR2ztTRrQ6P"
 			]
 		}
 	},

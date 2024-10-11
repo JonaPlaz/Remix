@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_var",
+						"type": "string"
+					}
+				],
+				"name": "setMyVar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/20_Heritage.sol": "Parent"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/20_Heritage.sol": {
+			"keccak256": "0xa6a3919ef7ef658dc1dc77b1049cb239934917e608ef8f8edb616f148f2474f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8bc1ee94cdeb7c3f683fac4d3d73a938cc13d161e596c6385ec929b24ce8ad13",
+				"dweb:/ipfs/QmdSD396sDTPmAYpHcs71vA3jeYPd9UGFCLti11XqMt7D7"
+			]
+		}
+	},
+	"version": 1
+}
