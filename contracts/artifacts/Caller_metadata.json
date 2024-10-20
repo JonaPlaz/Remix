@@ -6,22 +6,57 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
 					{
-						"internalType": "string",
-						"name": "_var",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"name": "getParentVarByChild",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "storeExt",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
 		"devdoc": {
+			"custom:dev-run-script": "./scripts/deploy_with_ethers.ts",
+			"details": "Store & retrieve value in a variable",
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"retrieve()": {
+					"details": "Return value",
+					"returns": {
+						"_0": "value of 'number'"
+					}
+				},
+				"storeExt(address,uint256)": {
+					"details": "Store a value in an external contract",
+					"params": {
+						"addr": "The address of the external contract",
+						"num": "The value to store in the external contract"
+					}
+				}
+			},
+			"title": "Caller",
 			"version": 1
 		},
 		"userdoc": {
@@ -32,7 +67,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/20_Heritage.sol": "Caller"
+			"contracts/21_Caller.sol": "Caller"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -46,12 +81,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/20_Heritage.sol": {
-			"keccak256": "0xa6a3919ef7ef658dc1dc77b1049cb239934917e608ef8f8edb616f148f2474f4",
-			"license": "MIT",
+		"contracts/01_Storage.sol": {
+			"keccak256": "0x82f161a0b26aabd22e4efbe3c5351dd6e0dc05414b245fd8ed8037b5bd3e74c7",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8bc1ee94cdeb7c3f683fac4d3d73a938cc13d161e596c6385ec929b24ce8ad13",
-				"dweb:/ipfs/QmdSD396sDTPmAYpHcs71vA3jeYPd9UGFCLti11XqMt7D7"
+				"bzz-raw://5e6e4d7a15f6ddaf25b5cd5e1a4a6b894916bb143f4d36f92d67d95324ba19b2",
+				"dweb:/ipfs/QmPdn2E2dA95iZ4S81jmkTPUoufsRtUV2izbmHNsK3DZri"
+			]
+		},
+		"contracts/21_Caller.sol": {
+			"keccak256": "0x9d9348c9634608e940d40419310aa7fa54c92190ec0f27e2f438c0615662ab9f",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://08a35575eaf1f023a66cc1cf076583ab0b8eae17a4f6b1cdbaed6a13b104c1d3",
+				"dweb:/ipfs/QmW9GCxZ3sMToSKk3ypvvQ2Z5nia8GBau3UKZYnNq93hJy"
 			]
 		}
 	},
