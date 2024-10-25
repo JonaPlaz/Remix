@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "balances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "redeemWithGuard",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "redeemWithUpdateBalance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"redeemWithGuard()": {
+					"details": "Redeem your ETH."
+				},
+				"redeemWithUpdateBalance()": {
+					"details": "Redeem your ETH."
+				},
+				"store()": {
+					"details": "Store ETH in the contract."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Security/30_newReetrency1.sol": "Vault"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Security/30_newReetrency1.sol": {
+			"keccak256": "0x96fb0ea85db5d85afd6f99f720890096063b52f29bfdeec03041edeb1880c487",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b4a0eb6677930026af884c38ce44d48bb7a164d659acb3f600db3d92e244c00f",
+				"dweb:/ipfs/QmY1BwEFUtRhgtKBLaoXhziadoQchPMVevqybYxj56AGwu"
+			]
+		}
+	},
+	"version": 1
+}
