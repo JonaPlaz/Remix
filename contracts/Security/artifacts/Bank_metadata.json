@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Security/36_forceFeeding.sol": "Bank"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Security/36_forceFeeding.sol": {
+			"keccak256": "0x38eeb1ae5e874124118c1e84f7579f12a662274e3377c5af6cad043e0d67fb57",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://dad689bce288b724fd6245da0906c02b931c9b550bffe938dc1ef7dbfe12bba0",
+				"dweb:/ipfs/QmewxhKfQBgXywTT64pmhyguqpnpBT5eWSdeKgRnuojH9u"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract Bank",
+						"name": "_bank",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "attackBank",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "bank",
+				"outputs": [
+					{
+						"internalType": "contract Bank",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Security/36_attackForceFeeding.sol": "attackForceFeeding"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Security/36_attackForceFeeding.sol": {
+			"keccak256": "0x90da3be8862e1927a81c0d3470076c977e05b63ad9475f465f293dd2db5d88d2",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://93ce899d9ae04f23eeaaf0f5ecd2e60be7be3c19b3163fdd23c5495fce165fec",
+				"dweb:/ipfs/QmTE3zTDnym4sobRSBE86PokcPd7HDobMehrzjkcBjvbsy"
+			]
+		},
+		"contracts/Security/36_forceFeeding.sol": {
+			"keccak256": "0xce20e65059546fa9e05d1d9633dc099ad2ad9f9341c8fe3aa93190577d6d2df6",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://1cf8ab71b6442da2ccd3c145acbf258cc5a0f9be7cf57c05946a1371e2a9f8c4",
+				"dweb:/ipfs/QmQ9Hn9ouMPCRxeKbdYDdye5bDZ9RZecZjvXNcTtamZRx2"
+			]
+		}
+	},
+	"version": 1
+}
