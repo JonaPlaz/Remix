@@ -1,0 +1,60 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "bid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawRefund",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Security/12_pullPayment.sol": "auction"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Security/12_pullPayment.sol": {
+			"keccak256": "0x5dd27ca173390c292374aa0209262d570b1b128a05ead42778fa6b97831904fa",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://be3aca66ce0873dde670f5ebf28f33d341043fb0acf9ca28a570d3ca1d2aee22",
+				"dweb:/ipfs/QmQaR6tvTVKusLn5bGd7RsGCcAgnBYUYvXB3g6jVzBiniF"
+			]
+		}
+	},
+	"version": 1
+}
